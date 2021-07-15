@@ -74,8 +74,8 @@ Our code is based on [DeiT](https://github.com/facebookresearch/deit) and [pytor
 
 File | Description
 -----|------------
-[`rpe_2d.py`](./rpe_2d.py) | The definition of 2D relative position encoding
-[`rpe_models.py`](./rpe_models.py) | The definition of models with 2D-RPE
-[`rpe_vision_transformer.py`](./rpe_vision_transformer.py) | We equip 2D-RPE on Attention, Block, and VisionTransformer modules
+[`rpe_2d.py`](./rpe_2d.py) | The implementation of 2D relative position encoding
+[`rpe_models.py`](./rpe_models.py) | The implementation of models with 2D-RPE
+[`rpe_vision_transformer.py`](./rpe_vision_transformer.py) | We equip 2D-RPE on `Attention`, `Block`, and `VisionTransformer` modules
 
 # License

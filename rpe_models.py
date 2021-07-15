@@ -1,4 +1,4 @@
-# DeiT with 2D relative position
+"""The implementation of models with 2D-RPE"""
 from timm.models.registry import register_model
 from rpe_2d import get_rpe_config, METHOD
 from models import deit_tiny_patch16_224,\
@@ -14,6 +14,7 @@ def deit_tiny_patch16_224_ctx_product_50_shared_k(pretrained=False, **kwargs):
         method=METHOD.PRODUCT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_tiny_patch16_224(pretrained=pretrained,
@@ -29,6 +30,7 @@ def deit_small_patch16_224_ctx_euc_20_shared_k(pretrained=False, **kwargs):
         method=METHOD.EUCLIDEAN,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -43,6 +45,7 @@ def deit_small_patch16_224_ctx_quant_51_shared_k(pretrained=False, **kwargs):
         method=METHOD.QUANT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -57,6 +60,7 @@ def deit_small_patch16_224_ctx_cross_56_shared_k(pretrained=False, **kwargs):
         method=METHOD.CROSS,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -71,6 +75,7 @@ def deit_small_patch16_224_ctx_product_50_shared_k(pretrained=False, **kwargs):
         method=METHOD.PRODUCT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -85,6 +90,7 @@ def deit_small_patch16_224_ctx_product_50_shared_qk(pretrained=False, **kwargs):
         method=METHOD.PRODUCT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='qk',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -99,6 +105,7 @@ def deit_small_patch16_224_ctx_product_50_shared_qkv(pretrained=False, **kwargs)
         method=METHOD.PRODUCT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='qkv',
     )
     return deit_small_patch16_224(pretrained=pretrained,
@@ -114,6 +121,7 @@ def deit_base_patch16_224_ctx_product_50_shared_k(pretrained=False, **kwargs):
         method=METHOD.PRODUCT,
         mode='ctx',
         shared_head=True,
+        skip=1,
         rpe_on='k',
     )
     return deit_base_patch16_224(pretrained=pretrained,
